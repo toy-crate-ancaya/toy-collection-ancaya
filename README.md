@@ -8,11 +8,52 @@ Yago
 
 📋 Visão Geral do Projeto
 O Ancaya Toy Collection é uma aplicação baseada em Java para gerenciar e exibir uma coleção de brinquedos. O projeto utiliza o Maven para gerenciamento de dependências e inclui diretórios organizados para o código-fonte, recursos e utilitários.
-✨ Funcionalidades Principais
+🎨 Design do Projeto
+Nota: Substitua o URL acima pelo link real da imagem hospedada (ex.: Figma, GitHub, ou outro serviço).
+📋 Esquema do Projeto
+🌞 Visão Geral da Interface
 
-Minha Coleção 🗂️: Gerencie sua coleção pessoal de brinquedos, adicionando, editando ou removendo itens.
-Os Melhores ⭐: Veja os brinquedos mais populares ou bem avaliados da comunidade.
-Categorias 🧩: Explore brinquedos organizados por categorias
+Minha Coleção 🗂️
+Adicionar novos brinquedos
+Editar ou remover itens da coleção
+
+
+Os Melhores ⭐
+Lista de brinquedos populares
+Avaliações da comunidade
+
+
+Categorias 🧩
+Furbys
+Monopoly
+Tabuleiros
+
+
+
+📊 Estrutura Detalhada
+
+
+
+Seção
+Descrição
+Exemplo de Uso
+
+
+
+Minha Coleção
+Gerencie seus brinquedos pessoais
+Adicionar um Furby
+
+
+Os Melhores
+Destaque de brinquedos mais votados
+Ver Monopoly em 1º lugar
+
+
+Categorias
+Navegação por tipo de brinquedo
+Explorar Tabuleiros
+
 
 📁 Estrutura de Pastas
 Back-end
@@ -68,6 +109,10 @@ Para rodar os testes unitários, use:
 
 Os arquivos enviados (como imagens de brinquedos) devem ser colocados no diretório uploads/.
 
+
+⏰ Última Atualização
+
+21 de maio de 2025, 06:58 PM -03
 
 📧 Contato
 Para dúvidas ou suporte, entre em contato diretamente com os integrantes da equipe.
