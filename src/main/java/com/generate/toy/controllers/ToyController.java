@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.generate.toy.dtos.ToyCollectionDTO;
@@ -37,7 +38,7 @@ public class ToyController {
                  content = @Content(schema = @Schema(implementation = ToyEntity.class)))
     @ApiResponse(responseCode = "400", description = "Dados inválidos")
 	@PostMapping("/create")
-	public ToyCollectionDTO createNewToy(@ModelAttribute ToyCollectionDTO toyDTO) throws IOException {
+	public ToyCollectionDTO createNewToy(@ModelAttribute ToyCollectionDTO toyDTO) throws IOException,Exception {
 		return toyService.createToy(toyDTO);
 	} 
 	
@@ -46,8 +47,12 @@ public class ToyController {
 				 content = @Content(schema = @Schema(implementation = ToyEntity.class)))
 	@ApiResponse(responseCode = "400", description = "Dados inválidos")
 	@PutMapping("/update/{toyId}")
-	public ToyCollectionDTO updateToy(@ModelAttribute ToyCollectionDTO toyDTO,@PathVariable Long toyId) throws IOException {
-		return toyService.updateOneToy(toyDTO, toyId);
+	public ToyCollectionDTO updateToy(@ModelAttribute ToyCollectionDTO toyDTO,
+			@PathVariable Long toyId,
+			 @RequestParam(required = false, defaultValue = "false") boolean like,
+		        @RequestParam(required = false, defaultValue = "false") boolean unlike,
+		        @RequestParam(required = false, defaultValue = "false") boolean view) throws IOException {
+		return toyService.updateOneToy(toyDTO, toyId,like,unlike,view);
 	}
 	
 	

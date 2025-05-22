@@ -2,18 +2,21 @@ package com.generate.toy.dtos;
 
 import org.springframework.web.multipart.MultipartFile;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.generate.toy.entities.ToyEntity;
 
 public class ToyCollectionDTO {
 	private Long toyId;
 	private String toyName;
 	private String toyObjective;
+	@JsonInclude(JsonInclude.Include.NON_NULL)
 	private MultipartFile toyMultipartFile;
 	private String toyCondition;
 	private Long toyPrice;
 	private Long toyLikes;
 	private Long toyViews;
 	private Long toyPopularity;
+	private String toyFileUrl;
 	public ToyCollectionDTO() {
 		super();
 	}
@@ -96,6 +99,14 @@ public class ToyCollectionDTO {
 	public void setToyPopularity(Long toyPopularity) {
 		this.toyPopularity = toyPopularity;
 	}
+	public String getToyFileUrl() {
+		return toyFileUrl;
+	}
+	public void setToyFileUrl(String toyFileUrl) {
+		this.toyFileUrl = toyFileUrl;
+	}
+	
+	
 	
 	
 
