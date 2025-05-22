@@ -60,11 +60,11 @@ public class ToyService {
 		toyEntity.setToyObjective(toy.getToyObjective());
 		}
 		
-		if(toy.getToyMultipartFile()!=null) {
-			
-			makeUploadAndDownloadArchive.deleteFile(toyEntity.getToyArchiveName());
-			
-			makeUploadAndDownloadArchive.saveArchive(toy.getToyMultipartFile(),toyEntity,toyRepository);
+		if (toy.getToyMultipartFile() != null && !toy.getToyMultipartFile().isEmpty()) {
+		    makeUploadAndDownloadArchive.deleteFile(toyEntity.getToyArchiveName());
+		    
+
+		    makeUploadAndDownloadArchive.saveArchive(toy.getToyMultipartFile(), toyEntity, toyRepository);
 		}
 		toyEntity.setToyCondition(toy.getToyCondition());
 		toyEntity.setToyPrice(toy.getToyPrice());
