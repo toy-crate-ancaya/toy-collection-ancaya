@@ -11,6 +11,7 @@ public class ToyMapper {
 	
 	public ToyCollectionDTO toToyCollectionDTO(ToyProjection p) {
 		ToyCollectionDTO toyCollectionDTO = new ToyCollectionDTO();
+		toyCollectionDTO.setToyId(p.getToyId());
 		toyCollectionDTO.setToyName(p.getToyName());
 		toyCollectionDTO.setToyObjective(p.getToyObjective());
 		toyCollectionDTO.setToyCondition(p.getToyCondition());

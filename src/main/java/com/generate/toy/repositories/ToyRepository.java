@@ -17,6 +17,7 @@ public interface ToyRepository extends JpaRepository<ToyEntity, Long> {
 	
 	@Query("""
 		    SELECT 
+			    t.toyId AS toyId,
 		        t.toyName AS toyName,
 		        t.toyObjective AS toyObjective,
 		        t.toyCondition AS toyCondition,

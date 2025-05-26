@@ -13,6 +13,8 @@ import com.generate.toy.mappers.ToyMapper;
 import com.generate.toy.repositories.ToyRepository;
 import com.generate.toy.utils.MakeUploadAndDownloadArchive;
 
+import jakarta.transaction.Transactional;
+
 
 @Service
 public class ToyService {
@@ -27,7 +29,7 @@ public class ToyService {
 	
 	@Autowired
 	private ToyMapper toyMapper;
-	
+	@Transactional
 	public ToyCollectionDTO createToy(ToyCollectionDTO toy) throws IOException,Exception {
 		Optional<ToyEntity> findExistentToy = toyRepository.findByToyName(toy.getToyName());
 		
