@@ -88,10 +88,7 @@ mvn spring-boot:run
 - `PUT /api/toys/{id}` - Atualiza brinquedo
 - `DELETE /api/toys/{id}` - Remove brinquedo
 
-### 🔐 Segurança
-- Autenticação via JWT
-- Controle de acesso baseado em roles
-- Validação de dados
+
 
 ### 🔄 Integração
 - API RESTful
