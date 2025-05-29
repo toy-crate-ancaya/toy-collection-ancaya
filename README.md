@@ -1,118 +1,125 @@
-🧸 Ancaya - Projeto de Coleção de Brinquedos
-Bem-vindo ao projeto Ancaya Toy Collection! Este repositório contém o código-fonte e os recursos da nossa aplicação de coleção de brinquedos, desenvolvida pela equipe Ancaya.
-👥 Integrantes da Equipe
+# 🎮 Toy Collection Backend
 
-Caio
-Ana Cariele
-Yago
+<div align="center">
 
-📋 Visão Geral do Projeto
-O Ancaya Toy Collection é uma aplicação baseada em Java para gerenciar e exibir uma coleção de brinquedos. O projeto utiliza o Maven para gerenciamento de dependências e inclui diretórios organizados para o código-fonte, recursos e utilitários.
-🎨 Design do Projeto
-Nota: Substitua o URL acima pelo link real da imagem hospedada (ex.: Figma, GitHub, ou outro serviço).
-📋 Esquema do Projeto
-🌞 Visão Geral da Interface
+![Status do Projeto](https://img.shields.io/badge/Status-Em%20Desenvolvimento-green)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.x-brightgreen)
+![Java](https://img.shields.io/badge/Java-17-orange)
+![Licença](https://img.shields.io/badge/Licença-Privada-red)
 
-Minha Coleção 🗂️
-Adicionar novos brinquedos
-Editar ou remover itens da coleção
+</div>
 
+API REST desenvolvida em Java com Spring Boot para gerenciamento de coleção de brinquedos.
 
-Os Melhores ⭐
-Lista de brinquedos populares
-Avaliações da comunidade
+## 📋 Índice
 
+- [📱 Sobre o Projeto](#-sobre-o-projeto)
+- [🚀 Tecnologias](#-tecnologias)
+- [🏗️ Estrutura do Projeto](#️-estrutura-do-projeto)
+- [⚙️ Pré-requisitos](#️-pré-requisitos)
+- [🔧 Instalação e Execução](#-instalação-e-execução)
+- [📚 Documentação da API](#-documentação-da-api)
 
-Categorias 🧩
-Furbys
-Monopoly
-Tabuleiros
+## 📱 Sobre o Projeto
 
+Backend robusto desenvolvido para suportar o gerenciamento completo de coleções de brinquedos, oferecendo endpoints REST para todas as operações necessárias.
 
+## 🚀 Tecnologias
 
-📊 Estrutura Detalhada
+- ☕ Java 17
+- 🍃 Spring Boot
+- 🎲 PostgreSQL
+- 📝 Maven
+- 🐳 Docker
+- 🔄 JPA/Hibernate
 
+## 🏗️ Estrutura do Projeto
 
+```
+src/
+├── main/
+│   ├── java/
+│   │   └── com.generate.toy/
+│   │       ├── configs/      # ⚙️ Configurações do Spring
+│   │       ├── controllers/  # 🎮 Controladores REST
+│   │       ├── dtos/        # 📦 Objetos de Transferência
+│   │       ├── entities/    # 📊 Entidades JPA
+│   │       ├── mappers/     # 🔄 Conversores de Objetos
+│   │       ├── projections/ # 📐 Projeções
+│   │       ├── repositories/# 💾 Repositórios
+│   │       ├── services/    # 🔧 Regras de Negócio
+│   │       └── utils/       # 🛠️ Utilitários
+│   └── resources/           # 📁 Recursos e Configurações
+└── test/                    # 🧪 Testes Automatizados
+```
 
-Seção
-Descrição
-Exemplo de Uso
+## ⚙️ Pré-requisitos
 
+- ☕ Java 17+
+- 📦 Maven
+- 🐳 Docker e Docker Compose
+- 🎲 PostgreSQL
 
+## 🔧 Instalação e Execução
 
-Minha Coleção
-Gerencie seus brinquedos pessoais
-Adicionar um Furby
+1. Clone o repositório:
+```bash
+git clone [URL_DO_REPOSITÓRIO]
+```
 
+2. Configure o banco de dados:
+```bash
+docker-compose up -d
+```
 
-Os Melhores
-Destaque de brinquedos mais votados
-Ver Monopoly em 1º lugar
+3. Execute o projeto:
+```bash
+mvn spring-boot:run
+```
 
+## 📚 Documentação da API
 
-Categorias
-Navegação por tipo de brinquedo
-Explorar Tabuleiros
+### 🎮 Endpoints Principais
 
+#### Brinquedos
+- `GET /api/toys` - Lista todos os brinquedos
+- `POST /api/toys` - Cadastra novo brinquedo
+- `GET /api/toys/{id}` - Busca brinquedo por ID
+- `PUT /api/toys/{id}` - Atualiza brinquedo
+- `DELETE /api/toys/{id}` - Remove brinquedo
 
-📁 Estrutura de Pastas
-Back-end
+### 🔐 Segurança
+- Autenticação via JWT
+- Controle de acesso baseado em roles
+- Validação de dados
 
-src/main/java 🖥️: Contém o código-fonte principal em Java.
-src/main/resources 📜: Armazena arquivos de configuração e outros recursos.
-src/test/java 🧪: Inclui os testes unitários da aplicação.
-target/ 📦: Contém classes compiladas, resultados de testes e anotações.
-bin/ ⚙️: Armazena arquivos executáveis.
-src/ 📂: Diretório raiz do código-fonte.
-uploads/ 📤: Diretório para arquivos enviados.
-docker-compose.yml 🐳: Arquivo de configuração para contêineres Docker.
-Dockerfile 🐋: Instruções para criar uma imagem Docker.
-mvnw 🔨: Executável do Maven Wrapper.
-mvnw.cmd 🔧: Maven Wrapper para Windows.
-pom.xml 📄: Arquivo de configuração do Maven (Project Object Model).
+### 🔄 Integração
+- API RESTful
+- Formato JSON
+- Paginação de resultados
+- Filtros avançados
 
-🛠️ Pré-requisitos
-Antes de começar, certifique-se de ter instalado:
+## 🎯 Status do Desenvolvimento
 
-Java JDK 11 ou superior ☕
-Maven 🔧
-Docker 🐳
-Git 📂
+- ✅ Configuração do Projeto
+- ✅ Estrutura Base
+- ✅ CRUD Básico
+- 🚧 Autenticação
+- 🚧 Testes Unitários
+- 📝 Documentação
 
-🚀 Como Começar
+## 📞 Suporte
 
-Clone o repositório para sua máquina local:
-git clone <URL_DO_REPOSITORIO>
+Para suporte ou dúvidas sobre a API, entre em contato através:
+- 📧 Email: [EMAIL]
+- 💬 Discord: [DISCORD]
 
+---
 
-Navegue até o diretório do projeto:
-cd ancaya-toy-collection
+<div align="center">
 
+Desenvolvido com ☕ pela Equipe Toy Collection
 
-Execute o comando para construir o projeto:
-./mvnw install
+[⬆ Voltar ao topo](#-toy-collection-backend)
 
-(ou mvnw.cmd install no Windows).
-
-Configure o ambiente com Docker:
-docker-compose up
-
-
-
-📝 Notas de Desenvolvimento
-
-Certifique-se de que as portas definidas no docker-compose.yml não estão em uso.
-
-Para rodar os testes unitários, use:
-./mvnw test
-
-
-Os arquivos enviados (como imagens de brinquedos) devem ser colocados no diretório uploads/.
-
-
-⏰ Última Atualização
-
-21 de maio de 2025, 06:58 PM -03
-
-📧 Contato
-Para dúvidas ou suporte, entre em contato diretamente com os integrantes da equipe.
+</div> 
